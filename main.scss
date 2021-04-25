@@ -1,0 +1,476 @@
+@import 'partials/fonts';
+@import 'partials/mixins';
+body {
+    font-family: 'Avenir';
+    margin: 0;
+}
+
+
+/*Font Sizes*/
+
+h1 {
+    @include mobile {
+        font-size: $h1-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $hero-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h1-desktab-fontsize;
+    }
+}
+
+h2 {
+    @include mobile {
+        font-size: $h2-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h2-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h2-desktab-fontsize;
+    }
+}
+
+h3 {
+    @include mobile {
+        font-size: $h3-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h3-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h3-desktab-fontsize;
+    }
+}
+
+h4 {
+    @include mobile {
+        font-size: $h4-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
+
+p {
+    @include mobile {
+        font-size: $p-mobile-fontsize;
+    }
+    @include tablet {
+        font-size: $h4-desktab-fontsize;
+    }
+    @include desktop {
+        font-size: $h4-desktab-fontsize;
+    }
+}
+
+
+/*Navigation Bar*/
+
+a {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    @include mobile {
+        font-size: $p-mobile-fontsize;
+        width: 50%;
+    }
+    &:hover {
+        animation: forfun 1.5s linear infinite;
+    }
+}
+
+.navigation-bar {
+    background-color: $primary-background-color;
+    display: flex;
+    align-items: center;
+    @include mobile {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    &__main-logo {
+        display: inline-flex;
+        height: 20px;
+        vertical-align: center;
+        @include mobile {
+            margin: 5% auto;
+        }
+        @include tablet {
+            padding-left: 3%;
+        }
+        @include desktop {
+            padding-left: 10%;
+        }
+    }
+    &__options {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        &-link {
+            color: white;
+            list-style-type: none;
+            @include mobile {
+                font-size: $h3-mobile-fontsize;
+                padding: 6% 0;
+            }
+            @include tablet {
+                display: inline-flex;
+                font-size: $h4-desktab-fontsize;
+                margin: 35px 15px 0 55px;
+                padding: 0 6% 17% 6%;
+            }
+            @include desktop {
+                display: inline-flex;
+                font-size: $h4-desktab-fontsize;
+                margin: 35px 0 0 70px;
+                padding: 0 6% 17% 6%;
+            }
+            &--live {
+                border-bottom: 5px solid white;
+            }
+            &:hover {
+                animation: forfun 1.5s linear infinite;
+            }
+        }
+    }
+}
+
+
+/*Hero*/
+
+.hero {
+    align-items: center;
+    background-image: url('/assets/images/Hero-photo.jpg'), linear-gradient(rgba(0, 0, 0, 0.2));
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    display: flex;
+    @include mobile {
+        height: 30vh;
+    }
+    @include tablet {
+        height: 70vh;
+    }
+    @include desktop {
+        height: 100vh;
+    }
+    &__title {
+        color: white;
+        line-height: 130%;
+        align-items: center;
+        @include mobile {
+            padding-left: 7%;
+        }
+        @include tablet {
+            padding-left: 3%;
+        }
+        @include desktop {
+            padding: 0 0 4% 10%;
+        }
+    }
+}
+
+
+/*About the Musicians Section*/
+
+.about-section {
+    &__musicians {
+        @include mobile {
+            padding: 2% 7% 0 7%;
+        }
+        @include tablet {
+            padding: 1% 3%;
+        }
+        @include desktop {
+            padding: 1% 10%;
+        }
+    }
+    &__photo {
+        display: block;
+        margin: 0 auto;
+        @include mobile {
+            width: 85%;
+        }
+        @include tablet {
+            width: 94%;
+        }
+        @include desktop {
+            width: 71%;
+        }
+    }
+    &__box1 {
+        @include mobile {
+            padding: 1% 0% 0 7%;
+            width: 83%;
+        }
+        @include tablet {
+            padding: 1% 0% 0 3%;
+            width: 90%;
+        }
+        @include desktop {
+            padding: 1% 15% 0 14.5%;
+        }
+    }
+    &__quote1 {
+        @include mobile {
+            line-height: 22px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        @include tablet {
+            line-height: 35px;
+        }
+        @include desktop {
+            line-height: 32px;
+            width: 95%;
+        }
+    }
+    &__quote2 {
+        font-weight: 600;
+        @include mobile {
+            font-size: $h4-mobile-fontsize;
+            padding: 8% 0;
+        }
+        @include tablet {
+            padding: 2% 0;
+        }
+        @include desktop {
+            font-size: $h4-desktab-fontsize;
+            padding: 2% 0;
+        }
+    }
+    &__band-head {
+        margin: 4% 0 1% 0;
+        @include mobile {
+            font-weight: 600;
+        }
+    }
+    &__box2 {
+        display: flex;
+        justify-content: center;
+        @include mobile {
+            flex-wrap: wrap;
+        }
+    }
+    &__descriptions {
+        display: inline-flex;
+        line-height: 20px;
+        @include mobile {
+            padding: 0 7%;
+        }
+        @include tablet {
+            font-size: $h4-desktab-fontsize;
+            padding: 0 3%;
+            line-height: 22px;
+        }
+        @include desktop {
+            font-size: $h4-desktab-fontsize;
+            width: 34%;
+            padding: 0 1.5%;
+        }
+    }
+}
+
+
+/*Photo Gallery Section*/
+
+.photo-section {
+    background-color: $secondary-background-color;
+    &__head {
+        @include mobile {
+            padding: 10% 0 0 7%;
+        }
+        @include tablet {
+            padding: 6% 0 0 3%;
+        }
+        @include desktop {
+            padding: 5% 0 0 10%;
+        }
+    }
+    &__photo-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 0 2.5% 0;
+        margin: 2% 4% 0 4%;
+        @include mobile {
+            padding: 0 0 8% 0;
+        }
+        @include tablet {
+            margin: 0;
+        }
+    }
+    &__image {
+        @include mobile {
+            width: 95%;
+            margin: 2.75%;
+        }
+        @include tablet {
+            width: 29.2%;
+            margin: 1.5%;
+        }
+        @include desktop {
+            width: 27.5%;
+            margin: 1%;
+        }
+        &:hover {
+            filter: brightness(115%);
+        }
+    }
+}
+
+
+/*Get In Touch Section*/
+
+.footer {
+    background-color: $primary-background-color;
+    color: white;
+    padding-bottom: 2%;
+    &__head {
+        @include mobile {
+            padding: 5% 0;
+        }
+        @include tablet {
+            display: flex;
+            padding: 5% 0;
+        }
+        @include desktop {
+            display: flex;
+            padding: 3% 0;
+        }
+        &-head {
+            margin: 0;
+            @include mobile {
+                min-width: 100px;
+                padding: 8% 2% 5% 4%;
+                font-size: 2rem;
+            }
+            @include tablet {
+                min-width: 250px;
+                padding: 1% 2% 0 3%;
+            }
+            @include desktop {
+                min-width: 250px;
+                padding: 1% 2% 0 10%;
+            }
+        }
+        &-box-logo {
+            @include mobile {
+                width: 50%;
+                padding-left: 4%;
+            }
+            @include tablet {
+                display: inline-flex;
+                width: 100%;
+            }
+            @include desktop {
+                display: inline-flex;
+                width: 100%;
+            }
+        }
+        &-logo {
+            @include mobile {
+                padding: 4% 8% 4% 0;
+                width: 20px;
+            }
+            @include tablet {
+                display: inline-flex;
+                padding: 0 8% 0 0;
+                width: 25px;
+            }
+            @include desktop {
+                display: inline-flex;
+                padding: 0 8% 0 0;
+                width: 25px;
+            }
+        }
+        &-logo2 {
+            @include mobile {
+                width: 11px;
+            }
+            @include tablet {
+                width: 14px;
+            }
+            @include desktop {
+                width: 14px;
+            }
+        }
+    }
+    &__head-logo {
+        display: inline-flex;
+        height: 20px;
+        @include mobile {
+            display: none;
+        }
+        @include tablet {
+            padding: 2% 3%;
+        }
+        @include desktop {
+            padding: 1.5% 10% 2% 2%;
+        }
+    }
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+            padding: 0 4%;
+            width: 92%;
+        }
+        @include tablet {
+            padding: 0 0 0 3%;
+            width: 90%;
+        }
+        @include desktop {
+            padding: 0 10%;
+            width: 60%;
+        }
+    }
+    &__contact {
+        display: flex;
+        line-height: 20px;
+        margin: 1%;
+        @include mobile {
+            margin: 7% 0;
+            line-height: 17px;
+        }
+        @include tablet {
+            font-size: $h4-desktab-fontsize;
+            padding-top: 10px;
+        }
+        @include desktop {
+            font-size: $h4-desktab-fontsize;
+            padding-top: 10px;
+        }
+        &1 {
+            font-weight: 600;
+            margin: 0;
+            letter-spacing: 1px;
+            line-height: 20px;
+            @include mobile {
+                font-size: $p-mobile-fontsize;
+                line-height: 17px;
+            }
+        }
+    }
+    &__copyright {
+        @include mobile {
+            margin: 3% 0 0 4%;
+            width: 60%;
+            line-height: 18px;
+            padding-bottom: 9%;
+        }
+        @include tablet {
+            padding: 1.5% 0 1% 3%;
+        }
+        @include desktop {
+            padding: 1.5% 0 0 10%;
+        }
+    }
+}
